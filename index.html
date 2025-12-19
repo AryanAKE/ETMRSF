@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETMRSF-2026 | Tezpur University</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-blue: #1e3a8a; /* Navy */
+            --brand-accent: #3b82f6; /* Bright Blue */
+            --brand-light: #eff6ff;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            scroll-behavior: smooth;
+        }
+
+        .bg-brand-navy { background-color: var(--brand-blue) !important; }
+        .text-brand-navy { color: var(--brand-blue) !important; }
+        .text-brand-accent { color: var(--brand-accent) !important; }
+        .btn-brand-accent { 
+            background-color: var(--brand-accent); 
+            color: white; 
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+        }
+        .btn-brand-accent:hover { 
+            background-color: #2563eb; 
+            color: white;
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: #0f172a;
+            overflow: hidden;
+            color: white;
+        }
+        .hero-bg-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.8) 50%, rgba(59, 130, 246, 0.4) 100%);
+        }
+
+        .section-heading {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60px;
+            height: 4px;
+            background: var(--brand-accent);
+            border-radius: 2px;
+        }
+
+        .nav-link {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #475569 !important;
+            padding: 0.5rem 1rem !important;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--brand-accent) !important;
+        }
+
+        .thrust-card {
+            border: 1px solid #f1f5f9;
+            border-radius: 1.5rem;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .thrust-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: var(--brand-accent);
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            text-align: center;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+        
+        .badge-conference {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #bfdbfe;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.5rem 1rem;
+            border-radius: 50rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="bg-brand-navy text-white py-2 d-none d-md-block border-bottom border-primary border-opacity-25">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="small fw-medium">
+                <span class="me-4"><i class="fas fa-calendar-check me-2 text-info"></i> March 12-13, 2026</span>
+                <span><i class="fas fa-map-marker-alt me-2 text-info"></i> MMTTC Building, Tezpur University</span>
+            </div>
+            <div class="small fw-medium">
+                <a href="mailto:cmdrnc@tezu.ernet.in" class="text-white text-decoration-none me-4 hover-info uppercase"><i class="fas fa-envelope me-2"></i> cmdrnc@tezu.ernet.in</a>
+                <span class="text-uppercase">Assam, India</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="bg-brand-navy rounded-3 p-2 me-3 text-white shadow">
+                    <i class="fas fa-microscope fa-lg"></i>
+                </div>
+                <div>
+                    <span class="d-block fw-black text-brand-navy lh-1 fs-4">ETMRSF-2026</span>
+                    <span class="small text-muted fw-bold text-uppercase tracking-wider" style="font-size: 10px;">Tezpur University</span>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">HOME</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">ABOUT</a>
+                        <ul class="dropdown-menu border-0 shadow-lg p-2">
+                            <li><a class="dropdown-item rounded-2 py-2" href="#about-conference">About Conference</a></li>
+                            <li><a class="dropdown-item rounded-2 py-2" href="#about-university">Tezpur University</a></li>
+                            <li><a class="dropdown-item rounded-2 py-2" href="#about-cmdr">About CMDR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#thrust-areas">THRUST AREAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dates">IMPORTANT DATES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#" class="btn btn-brand-accent rounded-pill px-4">REGISTER</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero Section -->
+    <section id="home" class="hero-section">
+        <img src="assets/img/tu.png" class="hero-bg-img" alt="University Campus">
+        <div class="hero-overlay"></div>
+
+        <div class="container position-relative z-1 py-5">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="badge-conference mb-4 d-inline-flex align-items-center">
+                        <span class="spinner-grow spinner-grow-sm me-2 text-info"></span>
+                        March 12-13, 2026 | International Event
+                    </div>
+                    
+                    <h1 class="display-3 fw-black mb-4 lh-sm">
+                        Emerging Trends in <span class="text-brand-accent">Multidisciplinary Research</span> for Sustainable Future
+                    </h1>
+                    
+                    <div class="lead mb-5 opacity-75 fw-medium pe-lg-5">
+                        <p class="mb-2">Organized by the <span class="text-white fw-bold">Centre for Multidisciplinary Research (CMDR)</span>, School of Multidisciplinary Studies, Tezpur University.</p>
+                        <p class="small tracking-wide">Sonitpur, Assam-784028, India</p>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3 mb-5">
+                        <a href="#dates" class="btn btn-brand-accent btn-lg px-5 py-3 rounded-4 shadow-lg">SCHEDULE & DATES</a>
+                        <a href="#thrust-areas" class="btn btn-outline-light btn-lg px-5 py-3 rounded-4 border-opacity-25 backdrop-blur">THRUST AREAS</a>
+                    </div>
+
+                    <!-- Countdown -->
+                    <div class="row g-3 max-width-600">
+                        <div class="col-6 col-md-3">
+                            <div class="countdown-item">
+                                <span id="days" class="d-block h2 fw-black mb-0">00</span>
+                                <span class="small fw-bold text-uppercase text-brand-accent" style="font-size: 10px;">Days To Go</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="countdown-item">
+                                <span id="hours" class="d-block h2 fw-black mb-0">00</span>
+                                <span class="small fw-bold text-uppercase text-brand-accent" style="font-size: 10px;">Hours</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="countdown-item">
+                                <span id="minutes" class="d-block h2 fw-black mb-0">00</span>
+                                <span class="small fw-bold text-uppercase text-brand-accent" style="font-size: 10px;">Minutes</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="countdown-item">
+                                <span id="seconds" class="d-block h2 fw-black mb-0">00</span>
+                                <span class="small fw-bold text-uppercase text-brand-accent" style="font-size: 10px;">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: About Tezpur University -->
+    <section id="about-university" class="section-padding bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <span class="text-primary fw-bold text-uppercase small tracking-widest">Institution Spotlight</span>
+                    </div>
+                    <h2 class="display-6 fw-bold text-brand-navy mb-4">Tezpur University <br><span class="text-muted fs-4 fw-medium">(A Central University)</span></h2>
+                    <p class="lead text-muted mb-4">
+                        Established by an Act of Parliament in 1994, Tezpur University stands as a premier seat of learning in the Northeast. 
+                    </p>
+                    <div class="text-muted mb-5">
+                        <p>The objectives are to offer employment-oriented and interdisciplinary courses to meet regional aspirations and development needs of Assam.</p>
+                        <p>TU aims to promote research in areas of special and direct relevance to the region and emerging areas of science and technology.</p>
+                    </div>
+                    <div class="row g-4 pt-4 border-top">
+                        <div class="col-4 text-center border-end">
+                            <span class="h3 d-block fw-bold text-brand-navy mb-0">1994</span>
+                            <span class="small fw-bold text-muted text-uppercase" style="font-size: 10px;">Established</span>
+                        </div>
+                        <div class="col-4 text-center border-end">
+                            <span class="h3 d-block fw-bold text-brand-navy mb-0">A+</span>
+                            <span class="small fw-bold text-muted text-uppercase" style="font-size: 10px;">NAAC Grade</span>
+                        </div>
+                        <div class="col-4 text-center">
+                            <span class="h3 d-block fw-bold text-brand-navy mb-0">Global</span>
+                            <span class="small fw-bold text-muted text-uppercase" style="font-size: 10px;">Ranking</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <div class="bg-primary bg-opacity-10 position-absolute w-100 h-100 rounded-5" style="transform: translate(100px, 100px); z-index: 0;"></div>
+                        <img src="assets/img/tu.png" class="img-fluid rounded-5 shadow-lg position-relative" style="z-index: 1;" alt="Tezpur University">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: About Organizing Group (CMDR) -->
+    <section id="about-cmdr" class="section-padding" style="background-color: #f1f5f9;">
+        <div class="container">
+            <div class="text-center mb-5 max-width-800 mx-auto">
+                <div class="section-heading mx-auto text-center">
+                    <span class="text-primary fw-bold text-uppercase small tracking-widest">Organizing Secretariat</span>
+                </div>
+                <h2 class="fw-black text-brand-navy">Centre for Multidisciplinary Research (CMDR)</h2>
+                <p class="text-muted">Formally established in 2020, CMDR enhances education and research across traditional boundaries.</p>
+            </div>
+            
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <div class="card border-0 rounded-5 shadow-sm p-4 p-md-5 bg-white">
+                        <h4 class="fw-bold text-brand-navy mb-4 d-flex align-items-center">
+                            <i class="fas fa-history me-3 text-brand-accent"></i> Legacy & Evolution
+                        </h4>
+                        <p class="text-muted small lh-lg">
+                            Tezpur University's research publications have a proven track record of multidisciplinary authorship. The center offers PhD and PG Open Elective courses. In 2023, the MoE awarded a Multidisciplinary IKS Centre titled 'Exploring Knowledge on Medieval Assam'.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-start p-4 bg-white rounded-4 shadow-sm mb-3">
+                        <div class="btn btn-brand-accent rounded-3 me-4 py-3"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Advanced Academics</h6>
+                            <p class="small text-muted mb-0">Innovative Open Elective courses for PG and Doctoral candidates.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start p-4 bg-white rounded-4 shadow-sm">
+                        <div class="btn btn-brand-accent rounded-3 me-4 py-3"><i class="fas fa-handshake"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">MoE Recognition</h6>
+                            <p class="small text-muted mb-0">Host to the IKS Division Centre awarded by the Ministry of Education.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Conference Objectives -->
+    <section class="section-padding bg-brand-navy text-white position-relative overflow-hidden">
+        <div class="container position-relative z-1">
+            <div class="mb-5">
+                <span class="text-brand-accent fw-bold text-uppercase small tracking-widest">Strategic Vision</span>
+                <h2 class="fw-black mt-2">Objectives of ETMRSF-2026</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-white bg-opacity-10 border-white border-opacity-10 rounded-4 p-4 text-white">
+                        <i class="fas fa-network-wired fa-3x text-brand-accent mb-4"></i>
+                        <p class="small fw-medium mb-0">Share recent advances in multidisciplinary research among professionals and scholars.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-white bg-opacity-10 border-white border-opacity-10 rounded-4 p-4 text-white">
+                        <i class="fas fa-sync-alt fa-3x text-brand-accent mb-4"></i>
+                        <p class="small fw-medium mb-0">Promote collaborative research across Science, Technology, Social Sciences, and Humanities.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-white bg-opacity-10 border-white border-opacity-10 rounded-4 p-4 text-white">
+                        <i class="fas fa-lightbulb fa-3x text-brand-accent mb-4"></i>
+                        <p class="small fw-medium mb-0">Encourage application of multidisciplinary knowledge for solving real-world challenges.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-white bg-opacity-10 border-white border-opacity-10 rounded-4 p-4 text-white">
+                        <i class="fas fa-leaf fa-3x text-brand-accent mb-4"></i>
+                        <p class="small fw-medium mb-0">Highlight the role of research in sustainable development and global innovation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Important Dates -->
+    <section id="dates" class="section-padding bg-white">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h2 class="fw-black text-brand-navy mb-4">Timeline of Events</h2>
+                    <p class="text-muted mb-5">Mark your calendars. We follow a strict timeline for submissions to ensure high-quality proceedings.</p>
+                    <div class="bg-brand-accent rounded-4 p-4 p-md-5 text-white shadow-lg">
+                        <p class="small text-uppercase fw-bold opacity-75 mb-2">Main Event Date</p>
+                        <h3 class="fw-black mb-1">March 12-13, 2026</h3>
+                        <p class="small opacity-75">Tezpur University Main Campus</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="list-group list-group-flush gap-3">
+                        <div class="d-flex align-items-center p-4 bg-light rounded-4 border">
+                            <div class="bg-white border rounded-3 p-3 text-center me-4" style="min-width: 80px;">
+                                <span class="d-block h4 fw-bold text-primary mb-0">24</span>
+                                <span class="small fw-bold text-uppercase text-muted" style="font-size: 10px;">Dec '25</span>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Registration Starts</h6>
+                                <p class="small text-muted mb-0">Official portal opens for all categories.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center p-4 bg-light rounded-4 border">
+                            <div class="bg-white border rounded-3 p-3 text-center me-4" style="min-width: 80px;">
+                                <span class="d-block h4 fw-bold text-primary mb-0">31</span>
+                                <span class="small fw-bold text-uppercase text-muted" style="font-size: 10px;">Jan '26</span>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Early Bird Deadline</h6>
+                                <p class="small text-muted mb-0">Last day for discounted registration fee.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center p-4 bg-brand-light rounded-4 border border-primary border-opacity-25">
+                            <div class="bg-primary text-white rounded-3 p-3 text-center me-4" style="min-width: 80px;">
+                                <span class="d-block h4 fw-bold mb-0">23</span>
+                                <span class="small fw-bold text-uppercase" style="font-size: 10px;">Feb '26</span>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-brand-navy mb-1">Final Registration</h6>
+                                <p class="small text-brand-navy fw-medium mb-0">Last date for presentation & participation registration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Thrust Areas -->
+    <section id="thrust-areas" class="section-padding bg-light border-top border-bottom">
+        <div class="container">
+            <div class="text-center mb-5 max-width-800 mx-auto">
+                <span class="text-primary fw-bold text-uppercase small tracking-widest">Research Scope</span>
+                <h2 class="fw-black text-brand-navy mt-2">Call for Papers: Thrust Areas</h2>
+                <p class="text-muted font-italic">Multidisciplinary approaches in (but not limited to):</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card thrust-card border-0 p-4 shadow-sm bg-white">
+                        <div class="btn btn-primary btn-lg rounded-3 mb-4 d-inline-flex align-items-center justify-center" style="width: 60px; height: 60px;">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h5 class="fw-bold text-brand-navy mb-4">AI, Data Science & Tech</h5>
+                        <ul class="list-unstyled small text-muted lh-lg mb-0">
+                            <li>• AI, Machine Learning & IoT</li>
+                            <li>• Blockchain Applications</li>
+                            <li>• GIS & Big Data Analytics</li>
+                            <li>• Technology Disruption Impact</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card thrust-card border-0 p-4 shadow-sm bg-white">
+                        <div class="btn btn-success btn-lg rounded-3 mb-4 d-inline-flex align-items-center justify-center" style="width: 60px; height: 60px;">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h5 class="fw-bold text-brand-navy mb-4">Sustainability & Science</h5>
+                        <ul class="list-unstyled small text-muted lh-lg mb-0">
+                            <li>• Renewable & Sustainable Energy</li>
+                            <li>• Climate Change & SDGs</li>
+                            <li>• Biotechnology & Life Sciences</li>
+                            <li>• Mathematical Modeling</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card thrust-card border-0 p-4 shadow-sm bg-white">
+                        <div class="btn btn-warning btn-lg rounded-3 mb-4 d-inline-flex align-items-center justify-center" style="width: 60px; height: 60px;">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="fw-bold text-brand-navy mb-4">Economics & Innovation</h5>
+                        <ul class="list-unstyled small text-muted lh-lg mb-0">
+                            <li>• Business Innovation & Supply Chain</li>
+                            <li>• Financial Inclusion & Digital Finance</li>
+                            <li>• Rural Development Strategies</li>
+                            <li>• Sustainable Business Practices</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-12 mt-5">
+                    <div class="card bg-brand-navy text-white rounded-5 border-0 p-4 p-md-5 overflow-hidden">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h4 class="fw-bold mb-2">Multidisciplinary Approaches for a Better Future</h4>
+                                <p class="small opacity-75">Review full length paper submission guidelines at CMDR Journal link.</p>
+                            </div>
+                            <div class="col-md-4 text-md-end">
+                                <a href="https://cmdr.tezu.ernet.in/index.php/journals/authors-guide" target="_blank" class="btn btn-brand-accent btn-lg rounded-pill px-5">View Guide</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Get in Touch -->
+    <section id="contact" class="section-padding bg-white">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h2 class="fw-black text-brand-navy mb-5">Get in Touch</h2>
+                    <div class="row g-4">
+                        <div class="col-12 d-flex">
+                            <div class="btn btn-brand-light text-brand-accent rounded-4 me-4 p-3 h-auto align-self-start"><i class="fas fa-building fa-lg"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Conference Secretariat</h6>
+                                <p class="small text-muted">
+                                    Room No. 203 & 133, Academic Building-1,<br>
+                                    Centre for Multidisciplinary Research, TU
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex">
+                            <div class="btn btn-brand-light text-brand-accent rounded-4 me-4 p-3 h-auto align-self-start"><i class="fas fa-user-tie fa-lg"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-3">Key Contacts</h6>
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <p class="small fw-bold text-primary mb-0">Dr. Dhrubajyoti Haloi</p>
+                                        <p class="small text-muted" style="font-size: 11px;">Head, CMDR | +91 7896777085</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="small fw-bold text-primary mb-0">Mr. Raisul Alam</p>
+                                        <p class="small text-muted" style="font-size: 11px;">Student Convenor | +91 7002184500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card bg-brand-navy rounded-5 border-0 p-4 p-md-5 text-white shadow-xl">
+                        <h4 class="fw-bold mb-4">Send Message</h4>
+                        <form>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control bg-white bg-opacity-10 border-white border-opacity-25 rounded-3 text-white py-3 shadow-none" placeholder="Full Name">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control bg-white bg-opacity-10 border-white border-opacity-25 rounded-3 text-white py-3 shadow-none" placeholder="Email Address">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control bg-white bg-opacity-10 border-white border-opacity-25 rounded-3 text-white py-3 shadow-none" placeholder="Subject">
+                            </div>
+                            <div class="mb-4">
+                                <textarea class="form-control bg-white bg-opacity-10 border-white border-opacity-25 rounded-3 text-white py-3 shadow-none" rows="4" placeholder="Your Query..."></textarea>
+                            </div>
+                            <button class="btn btn-brand-accent w-100 py-3 rounded-3 fw-bold">SEND ENQUIRY</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11: Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-5 mb-5 border-bottom border-white border-opacity-10 pb-5">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary rounded-3 p-2 me-3">TU</div>
+                        <h4 class="fw-black mb-0">ETMRSF-2026</h4>
+                    </div>
+                    <p class="small text-muted lh-lg">
+                        International Conference on Emerging Trends in Multidisciplinary Research for Sustainable Future.
+                    </p>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="fw-bold text-primary text-uppercase small tracking-widest mb-4">Navigation</h6>
+                    <ul class="list-unstyled small text-muted">
+                        <li class="mb-2"><a href="#about-conference" class="text-reset text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="#thrust-areas" class="text-reset text-decoration-none">Call for Papers</a></li>
+                        <li class="mb-2"><a href="#dates" class="text-reset text-decoration-none">Dates</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-3">
+                    <h6 class="fw-bold text-primary text-uppercase small tracking-widest mb-4">Connect</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width: 35px; height: 35px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width: 35px; height: 35px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width: 35px; height: 35px;"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-muted" style="font-size: 11px;">
+                <p class="mb-0">&copy; 2026 ETMRSF | Organized by Centre for Multidisciplinary Research, Tezpur University, Assam-784028.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Countdown Logic (Target: March 12, 2026)
+        const targetDate = new Date('March 12, 2026 09:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = d < 10 ? '0'+d : d;
+            document.getElementById('hours').innerText = h < 10 ? '0'+h : h;
+            document.getElementById('minutes').innerText = m < 10 ? '0'+m : m;
+            document.getElementById('seconds').innerText = s < 10 ? '0'+s : s;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
