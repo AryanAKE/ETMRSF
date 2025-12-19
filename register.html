@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | ETMRSF-2026</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-blue: #1e3a8a;
+            --brand-accent: #3b82f6;
+            --brand-light: #eff6ff;
+            --brand-navy: #0f172a;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+
+        /* Standardized Navigation Styling from other pages */
+        .bg-brand-navy { background-color: var(--brand-blue) !important; }
+        .text-brand-navy { color: var(--brand-blue) !important; }
+        .nav-link { 
+            font-weight: 700; 
+            font-size: 0.85rem; 
+            color: #475569 !important; 
+            padding: 0.5rem 1rem !important;
+        }
+        .nav-link:hover, .nav-link.active { color: var(--brand-accent) !important; }
+        
+        .btn-brand-accent { 
+            background-color: var(--brand-accent); 
+            color: white; 
+            border: none;
+            font-weight: 700;
+        }
+
+        /* Page specific styling */
+        .page-header {
+            background: linear-gradient(rgba(30, 58, 138, 0.95), rgba(15, 23, 42, 0.9)), url('assets/img/tu.png');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .fee-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .table thead {
+            background-color: var(--brand-light);
+            color: var(--brand-blue);
+        }
+
+        .table th { border: none; padding: 1.2rem; font-weight: 700; }
+        .table td { padding: 1.2rem; vertical-align: middle; border-bottom: 1px solid #f1f5f9; }
+
+        .btn-register-main {
+            background-color: var(--brand-accent);
+            color: white;
+            font-weight: 800;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-register-main:hover {
+            background-color: var(--brand-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+            color: white;
+        }
+
+        .helpdesk-card {
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+
+        .helpdesk-card:hover { transform: translateY(-5px); }
+
+        .helpdesk-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--brand-light);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="bg-brand-navy rounded-3 p-2 me-3 text-white shadow">
+                    <i class="fas fa-microscope fa-lg"></i>
+                </div>
+                <div>
+                    <span class="d-block fw-black text-brand-navy lh-1 fs-4">ETMRSF-2026</span>
+                    <span class="small text-muted fw-bold text-uppercase" style="font-size: 10px;">Tezpur University</span>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="thrust-areas.html">THRUST AREAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="committee.html">COMMITTEE & ADVISORY BOARD</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dates.html">IMPORTANT DATES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">CONTACT</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="register.html">REGISTER NOW</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Conference Registration</h1>
+            <p class="opacity-75">Join us for ETMRSF-2026 at Tezpur University</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <div class="fee-card">
+                    <h3 class="fw-bold text-brand-navy mb-4 text-center">Registration Fee Structure</h3>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th class="text-center">With Paper/Poster</th>
+                                    <th class="text-center">Without Presentation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold">Students / Research Scholars</td>
+                                    <td class="text-center">₹ 800</td>
+                                    <td class="text-center">₹ 500</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Faculty Members</td>
+                                    <td class="text-center">₹ 1,500</td>
+                                    <td class="text-center">₹ 1,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Industry Professionals</td>
+                                    <td class="text-center">₹ 2,500</td>
+                                    <td class="text-center">₹ 2,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 p-3 bg-light rounded-3">
+                        <p class="small text-muted mb-0">
+                            <i class="fas fa-info-circle me-2 text-primary"></i>
+                            Fee includes: Conference Kit, Certificate, Access to Sessions, Lunch & Refreshments.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center mt-5">
+                        <a href="#" class="btn btn-register-main">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 pt-4">
+            <h3 class="fw-bold text-brand-navy text-center mb-5">Registration Helpdesk</h3>
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="helpdesk-card shadow-sm">
+                        <img src="https://via.placeholder.com/100" class="helpdesk-img" alt="Chandrama Bairagi">
+                        <h6 class="fw-bold mb-1 small">Chandrama Bairagi</h6>
+                        <p class="text-muted mb-0" style="font-size: 11px;">Reception Committee</p>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="small opacity-50 mb-0">&copy; 2026 ETMRSF | Organized by CMDR, Tezpur University.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
