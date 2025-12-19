@@ -1,0 +1,4 @@
+
+git remote add origin https://github.com/AryanAKE/ETMRSF.git
+git branch -M main
+git push -u origin main

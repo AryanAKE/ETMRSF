@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Committee & Board | ETMRSF-2026</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-blue: #1e3a8a;
+            --brand-accent: #3b82f6;
+            --brand-light: #eff6ff;
+            --brand-navy: #0f172a;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+
+        .navbar-brand span { font-weight: 800; }
+        
+        /* Header Styling */
+        .page-header {
+            background: linear-gradient(rgba(30, 58, 138, 0.95), rgba(15, 23, 42, 0.9)), url('assets/img/tu.png');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .section-title {
+            color: var(--brand-blue);
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            width: 50px;
+            height: 4px;
+            background: var(--brand-accent);
+            border-radius: 2px;
+        }
+
+        /* Member Card Styling */
+        .member-card {
+            background: white;
+            border: none;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            text-align: center;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-container {
+            width: 120px;
+            height: 120px;
+            margin: 30px auto 20px;
+            border-radius: 50%;
+            padding: 5px;
+            border: 3px solid var(--brand-light);
+            overflow: hidden;
+        }
+
+        .member-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            background: #e2e8f0;
+        }
+
+        .member-role {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--brand-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .member-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--brand-blue);
+            margin: 5px 0;
+        }
+
+        .member-org {
+            font-size: 0.85rem;
+            color: #64748b;
+            padding: 0 15px 25px;
+        }
+
+        .nav-link { font-weight: 700; font-size: 0.85rem; color: #475569 !important; }
+        .nav-link.active { color: var(--brand-accent) !important; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="bg-brand-navy rounded-3 p-2 me-3 text-white shadow" style="background-color: #1e3a8a;">
+                    <i class="fas fa-users-cog fa-lg"></i>
+                </div>
+                <div>
+                    <span class="d-block text-brand-navy lh-1 fs-4" style="color: #1e3a8a;">ETMRSF-2026</span>
+                    <span class="small text-muted fw-bold text-uppercase" style="font-size: 10px;">Committee</span>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="thrust-areas.html">THRUST AREAS</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="committee.html">COMMITTEE & ADVISORY BOARD</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dates.html">IMPORTANT DATES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#" class="btn btn-brand-accent rounded-pill px-4">REGISTER</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Our Committee & Advisory Board</h1>
+            <p class="opacity-75">The distinguished leadership guiding ETMRSF-2026</p>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container text-center">
+            
+            <h2 class="section-title">Organizing Committee</h2>
+            <div class="row g-4 mb-5">
+                <div class="col-md-4 col-lg-3">
+                    <div class="card member-card shadow-sm">
+                        <div class="img-container">
+                            <img src="https://via.placeholder.com/150" alt="Prof. Dhruba K Bhattacharyya" class="member-img">
+                        </div>
+                        <div class="member-role">Chief Patron [cite: 113]</div>
+                        <div class="member-name">Prof. Dhruba K Bhattacharyya [cite: 113]</div>
+                        <div class="member-org">Hon'ble Vice Chancellor (Acting), Tezpur University [cite: 116]</div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card member-card shadow-sm">
+                        <div class="img-container">
+                            <img src="https://via.placeholder.com/150" alt="Prof. Debendra Chandra Baruah" class="member-img">
+                        </div>
+                        <div class="member-role">Patron [cite: 114]</div>
+                        <div class="member-name">Prof. Debendra Chandra Baruah [cite: 117]</div>
+                        <div class="member-org">Dean, School of Multidisciplinary Studies [cite: 118]</div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card member-card shadow-sm">
+                        <div class="img-container">
+                            <img src="https://via.placeholder.com/150" alt="Prof. Nirmali Gogoi" class="member-img">
+                        </div>
+                        <div class="member-role">Convenor [cite: 115]</div>
+                        <div class="member-name">Prof. Nirmali Gogoi [cite: 119]</div>
+                        <div class="member-org">Dept. of Environmental Science, TU [cite: 119]</div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card member-card shadow-sm">
+                        <div class="img-container">
+                            <img src="https://via.placeholder.com/150" alt="Prof. Suvendra Kumar Ray" class="member-img">
+                        </div>
+                        <div class="member-role">Organizing Secretary [cite: 128]</div>
+                        <div class="member-name">Prof. Suvendra Kumar Ray [cite: 128]</div>
+                        <div class="member-org">Dept. of MBBT, Tezpur University [cite: 128]</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title mt-5">Advisory Board</h2>
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-3">
+                    <div class="card member-card shadow-sm">
+                        <div class="img-container">
+                            <img src="https://via.placeholder.com/150" alt="Dr. Rupam Kumar Sarma" class="member-img">
+                        </div>
+                        <div class="member-name">Dr. Rupam Kumar Sarma [cite: 156]</div>
+                        <div class="member-org">Rajiv Gandhi University, Arunachal Pradesh [cite: 156]</div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card member-card shadow-sm">
+                        <div class="img-container">
+                            <img src="https://via.placeholder.com/150" alt="Prof. Ramesh C Deka" class="member-img">
+                        </div>
+                        <div class="member-name">Prof. Ramesh C Deka [cite: 158]</div>
+                        <div class="member-org">Cotton University, Guwahati [cite: 158]</div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card member-card shadow-sm">
+                        <div class="img-container">
+                            <img src="https://via.placeholder.com/150" alt="Prof. Rajive Mohan Pant" class="member-img">
+                        </div>
+                        <div class="member-name">Prof. Rajive Mohan Pant [cite: 159]</div>
+                        <div class="member-org">Assam University, Silchar [cite: 159]</div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card member-card shadow-sm">
+                        <div class="img-container">
+                            <img src="https://via.placeholder.com/150" alt="Prof. Jiten Hazarika" class="member-img">
+                        </div>
+                        <div class="member-name">Prof. Jiten Hazarika [cite: 161]</div>
+                        <div class="member-org">Dibrugarh University [cite: 161]</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="small opacity-50 mb-0">&copy; 2026 ETMRSF | Organized by CMDR, Tezpur University.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

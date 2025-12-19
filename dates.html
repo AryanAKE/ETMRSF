@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Dates | ETMRSF-2026</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-blue: #1e3a8a;
+            --brand-accent: #3b82f6;
+            --brand-light: #eff6ff;
+            --brand-navy: #0f172a;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+
+        /* Hero Header */
+        .page-header {
+            background: linear-gradient(rgba(30, 58, 138, 0.95), rgba(15, 23, 42, 0.9)), url('assets/img/tu.png');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        /* Timeline Styling */
+        .timeline-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline-item {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            border-color: var(--brand-accent);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        .date-box {
+            min-width: 100px;
+            text-align: center;
+            padding-right: 2rem;
+            border-right: 2px solid var(--brand-light);
+            margin-right: 2rem;
+        }
+
+        .date-day {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--brand-blue);
+            line-height: 1;
+        }
+
+        .date-month {
+            display: block;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--brand-accent);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .event-title {
+            font-weight: 700;
+            color: var(--brand-navy);
+            margin-bottom: 0.25rem;
+        }
+
+        .event-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 0;
+        }
+
+        /* Highlight for Conference Day */
+        .timeline-highlight {
+            background: var(--brand-blue);
+            color: white;
+            border: none;
+        }
+
+        .timeline-highlight .date-day, 
+        .timeline-highlight .date-month,
+        .timeline-highlight .event-title {
+            color: white;
+        }
+        
+        .timeline-highlight .date-box {
+            border-right-color: rgba(255,255,255,0.2);
+        }
+
+        .nav-link { font-weight: 700; font-size: 0.85rem; color: #475569 !important; }
+        .nav-link.active { color: var(--brand-accent) !important; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="bg-brand-navy rounded-3 p-2 me-3 text-white">
+                    <i class="fas fa-calendar-alt fa-lg"></i>
+                </div>
+                <div>
+                    <span class="d-block fw-black text-brand-navy lh-1 fs-4" style="color: var(--brand-blue);">ETMRSF-2026</span>
+                    <span class="small text-muted fw-bold text-uppercase" style="font-size: 10px;">Deadlines</span>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="thrust-areas.html">THRUST AREAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="committee.html">COMMITTEE & ADVISORY BOARD</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="dates.html">IMPORTANT DATES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#" class="btn btn-brand-accent rounded-pill px-4">REGISTER</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Important Dates</h1>
+            <p class="opacity-75">Please note the following submission and registration deadlines</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="timeline-container">
+            
+            <div class="timeline-item">
+                <div class="date-box">
+                    <span class="date-day">24</span>
+                    <span class="date-month">Dec 2025</span>
+                </div>
+                <div>
+                    <h5 class="event-title">Registration Starts </h5>
+                    <p class="event-desc">Online portal opens for all participant categories.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="date-box">
+                    <span class="date-day">31</span>
+                    <span class="date-month">Jan 2026</span>
+                </div>
+                <div>
+                    <h5 class="event-title">Early Bird Deadline </h5>
+                    <p class="event-desc">Last date to avail discounted registration rates.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="date-box">
+                    <span class="date-day">20</span>
+                    <span class="date-month">Feb 2026</span>
+                </div>
+                <div>
+                    <h5 class="event-title">Acceptance Notification </h5>
+                    <p class="event-desc">Notification to authors regarding paper/poster acceptance.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="date-box">
+                    <span class="date-day">23</span>
+                    <span class="date-month">Feb 2026</span>
+                </div>
+                <div>
+                    <h5 class="event-title">Final Registration </h5>
+                    <p class="event-desc">Last date for registration for participation.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item timeline-highlight shadow-lg">
+                <div class="date-box">
+                    <span class="date-day">12-13</span>
+                    <span class="date-month">Mar 2026</span>
+                </div>
+                <div>
+                    <h5 class="event-title">Conference Dates </h5>
+                    <p class="event-desc">Main event including Inaugural, Technical, and Valedictory sessions.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-4 text-center">
+            <div class="card bg-brand-light border-0 p-4 rounded-4 d-inline-block">
+                <p class="small mb-0 text-brand-navy">
+                    <i class="fas fa-info-circle me-2"></i>
+                    All deadlines are based on <strong>Indian Standard Time (IST)</strong>.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="small opacity-50 mb-0">&copy; 2026 ETMRSF | Tezpur University, Assam-784028.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
